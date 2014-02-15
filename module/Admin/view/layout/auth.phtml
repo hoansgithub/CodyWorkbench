@@ -1,0 +1,108 @@
+<?php echo $this->doctype(); ?>
+
+
+<html lang="en">
+    
+<!-- Mirrored from aqvatarius.com/themes/gemini/pages-signin.html by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 12 Feb 2014 08:38:11 GMT -->
+<head>     
+	<?php echo  $this->headTitle($this->actionName); ?>
+<!--        <title>Gemini</title>    -->
+	<?php echo $this->headMeta()
+			->appendName('viewport','ext/html; charset=utf-8')
+			->appendHttpEquiv('Content-Type','width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+	?>
+<!--        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />-->
+	<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                        ->appendStylesheet($this->basePath() . '/theme/admin/css/styles.css');
+	?>
+<!--        <link href="css/styles.css" rel="stylesheet" type="text/css" />-->
+        <!--[if lt IE 10]><link rel="stylesheet" type="text/css" href="css/ie.css"/><![endif]-->
+        <script type="text/javascript" >
+		var adminThemePath="<?php echo $this->basePath() . '/theme/admin'; ?>";
+		</script>
+		<?php echo $this->headScript()
+			
+            ->appendFile($this->basePath() . '/theme/admin/js/plugins/jquery/jquery.min.js')
+			->appendFile($this->basePath() . '/js/bootstrap.min.js')
+            ->appendFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->appendFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+			->appendFile($this->basePath() . '/theme/admin/js/plugins/jquery/jquery-ui.min.js')
+			->appendFile($this->basePath() . '/theme/admin/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js')
+			->appendFile($this->basePath() . '/theme/admin/js/plugins/jquery-validation/jquery.validate.min.js')
+			->appendFile($this->basePath() . '/theme/admin/js/plugins.js')
+			->appendFile($this->basePath() . '/theme/admin/js/demo.js')
+			->appendFile($this->basePath() . '/theme/admin/js/actions.js');
+		?>
+		
+<!--        <script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/plugins/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/plugins/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+                
+        <script type="text/javascript" src="js/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+        <script type="text/javascript" src="js/plugins.js"></script>        
+        <script type="text/javascript" src="js/demo.js"></script>
+        <script type="text/javascript" src="js/actions.js"></script>        -->
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','<?php echo $this->basePath() ?>/theme/admin/www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-36783416-1', 'aqvatarius.com');
+            ga('send', 'pageview');
+        </script>        
+        
+    </head>
+    <body>
+        
+        <div class="page-container">
+            
+            <div class="page-content page-content-default">
+                <?php echo $this->content; ?>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+        $("#signinForm").validate({
+		rules: {
+			login: "required",
+			password: "required"
+		},
+		messages: {
+			firstname: "Please enter your login",
+			lastname: "Please enter your password"			
+		}
+	}); 
+		$("#signupForm").validate({
+		rules: {
+			login: {
+				required: true,
+				minlength: 2
+			},
+			password: {
+				required: true,
+				minlength: 5
+			},
+			're-password': {
+				required: true,
+				minlength: 5,
+				equalTo: "#password"
+			},
+			email: {
+				required: true,
+				email: true
+			},
+                        name: "required"			
+		}
+	}); 
+	
+        </script>
+        
+    </body>
+
+<!-- Mirrored from aqvatarius.com/themes/gemini/pages-signin.html by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 12 Feb 2014 08:38:11 GMT -->
+</html>
