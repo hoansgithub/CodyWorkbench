@@ -85,6 +85,7 @@ return array(
         'template_map' => array(
 			'admin/layout'    => __DIR__ . '/../../Admin/view/layout/layout.phtml',
 			'auth/layout'	=> __DIR__ . '/../../Admin/view/layout/auth.phtml',
+			'cp/layout'	=> __DIR__ . '/../../Admin/view/layout/cp.phtml',
 			
 			'main/layout'    => __DIR__ . '/../../Main/view/layout/layout.phtml',
 			
@@ -105,7 +106,7 @@ return array(
 				'default'=>'application/layout',
 			),
             'Admin' => array(
-				
+				'admin\controller\cp'=>'cp/layout',
 				'admin\controller\auth'=>'auth/layout',
 				'default'=>'admin/layout',
 			),

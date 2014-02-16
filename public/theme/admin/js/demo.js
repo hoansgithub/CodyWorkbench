@@ -7,10 +7,10 @@
 */
 
 $(document).ready(function(){
-    $.get(adminThemePath+"/js/assets/ajax-sidebar.html", function(data){
-        $(".page-sidebar").html(data);
+   
+        
         $(".page-sidebar").mCustomScrollbar({autoHideScrollbar: true, scrollInertia: 20, advanced: {autoScrollOnFocus: false}})
-    });
+    
 
     /* fullcalendar (demo) */
     

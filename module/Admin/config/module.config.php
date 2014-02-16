@@ -100,7 +100,8 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Admin\Controller\Index' => 'Admin\Controller\IndexController',
-			 'Admin\Controller\Auth' => 'Admin\Controller\AuthController'
+			 'Admin\Controller\Auth' => 'Admin\Controller\AuthController',
+			'Admin\Controller\Cp' => 'Admin\Controller\CpController'
         ),
     ),
     'view_manager' => array(
